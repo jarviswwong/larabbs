@@ -23,13 +23,14 @@ body {
 }
 
 .navbar-user {
-  //去除dropdown的小箭头
+  //去除dropDown的小箭头
   .dropdown-toggle::after {
     display: none;
   }
   img.avatar-thumbnail {
     border-radius: 2px;
   }
+  //调整dropDown样式
   .dropdown-menu {
     right: -30px;
     min-width: auto;

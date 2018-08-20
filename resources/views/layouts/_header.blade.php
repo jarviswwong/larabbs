@@ -42,7 +42,11 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDetailsDropdownMenu">
                             <a class="dropdown-item" href="#">我的主页</a>
                             <a class="dropdown-item" href="#">设置</a>
-                            <a class="dropdown-item" href="#">退出登录</a>
+                            <a class="dropdown-item" href="{{route('logout')}}"
+                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">退出登录</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </div>
                     </li>
                 @endguest

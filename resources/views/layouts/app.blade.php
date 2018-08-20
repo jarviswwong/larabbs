@@ -11,6 +11,7 @@
             @yield('title','LaraBBS') - 开发知识分享与交流
         </title>
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        @yield('external_css')
     </head>
     <body>
         <div id="app" class="{{route_class()}}-page">
@@ -22,7 +23,7 @@
 
             @include('layouts._footer')
         </div>
-
+        @yield('external_js')
         <script src="{{asset('js/app.js')}}"></script>
     </body>
 
