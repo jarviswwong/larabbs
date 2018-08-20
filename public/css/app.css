@@ -10489,6 +10489,50 @@ body {
   margin-top: 0px;
 }
 
+.navbar-user .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-user img.avatar-thumbnail {
+  border-radius: 2px;
+}
+
+.navbar-user .dropdown-menu {
+  right: -30px;
+  min-width: auto;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 5px 20px rgba(26, 26, 26, 0.1);
+          box-shadow: 0 5px 20px rgba(26, 26, 26, 0.1);
+}
+
+.navbar-user .dropdown-menu:before {
+  position: absolute;
+  top: 0px;
+  left: 44px;
+  content: '';
+  width: 0;
+  height: 0;
+  margin-top: -9px;
+  border-width: 0px 9px 9px 9px;
+  border-style: solid;
+  border-color: transparent transparent #ebebeb transparent;
+}
+
+.navbar-user .dropdown-menu:after {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  content: '';
+  width: 0;
+  height: 0;
+  margin-top: -8px;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #fff transparent;
+}
+
 /* Sticky footer styles */
 
 html {

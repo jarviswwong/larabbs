@@ -23,14 +23,29 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav">
+            <ul class="navbar-nav navbar-user">
                 <!-- Authentication Links -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#">登录</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">注册</a>
-                </li>
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href={{route('login')}}>登录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('register')}}">注册</a>
+                    </li>
+                @else
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDetailsDropdownMenu" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                            <img src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60"
+                                 class="avatar-thumbnail" width="30px" height="30px">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDetailsDropdownMenu">
+                            <a class="dropdown-item" href="#">我的主页</a>
+                            <a class="dropdown-item" href="#">设置</a>
+                            <a class="dropdown-item" href="#">退出登录</a>
+                        </div>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>
