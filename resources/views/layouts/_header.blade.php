@@ -40,7 +40,8 @@
                                  class="avatar-thumbnail" width="30px" height="30px">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDetailsDropdownMenu">
-                            <a class="dropdown-item" href="#">我的主页</a>
+                            <a class="dropdown-item"
+                               href="{{route('users.edit', \Illuminate\Support\Facades\Auth::id())}}">我的主页</a>
                             <a class="dropdown-item" href="#">设置</a>
                             <a class="dropdown-item" href="{{route('logout')}}"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">退出登录</a>
