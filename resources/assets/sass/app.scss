@@ -4,6 +4,8 @@
 @import 'variables';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+//Toaster
+@import "~toastr/toastr";
 
 //aliyun icons
 @font-face {
@@ -170,7 +172,17 @@ body {
             text-overflow: ellipsis;
           }
           .user-details-item {
-            margin-bottom: 10px;
+            padding: 10px 0;
+          }
+        }
+        //编辑资料button
+        .user-details-footer {
+          padding-top: 10px;
+          position: relative;
+          .toUserEdit {
+            position: absolute;
+            right: 0;
+            bottom: 0;
           }
         }
       }

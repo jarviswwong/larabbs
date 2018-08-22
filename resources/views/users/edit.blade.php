@@ -30,35 +30,49 @@
                             <h2 class="user-details-title">{{$user->name}}</h2>
                         </div>
                         <div class="user-edit-body">
-                            {{--性别修改--}}
-                            <div class="user-edit-item">
-                                <div class="item-title">性别</div>
-                                <div class="item-entry">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="userGenderInput"
-                                               id="RadioForMale" value="M" @if($user->gender === 'M') checked @endif>
-                                        <label class="form-check-label" for="RadioForMale">男</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="userGenderInput"
-                                               id="RadioForFemale" value="F" @if($user->gender === 'F') checked @endif>
-                                        <label class="form-check-label" for="RadioForFemale">女</label>
+                            <form action="{{route('users.update',$user->id)}}" method="POST" accept-charset="UTF-8">
+                                {{ method_field('PUT') }}
+                                @csrf
+                                {{--性别修改--}}
+                                <div class="user-edit-item">
+                                    <div class="item-title">性别</div>
+                                    <div class="item-entry">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender"
+                                                   id="RadioForMale" value="M"
+                                                   @if($user->gender === 'M') checked @endif>
+                                            <label class="form-check-label" for="RadioForMale">男</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender"
+                                                   id="RadioForFemale" value="F"
+                                                   @if($user->gender === 'F') checked @endif>
+                                            <label class="form-check-label" for="RadioForFemale">女</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            {{--个人介绍修改--}}
-                            <div class="user-edit-item">
-                                <div class="item-title" style="line-height: 37px;">个人简介</div>
-                                <div class="item-entry">
-                                    <input type="text" class="form-control l-input" placeholder="请用一句话介绍你自己.."
-                                           name="introduction" value="{{$user->introduction}}">
+                                {{--个人介绍修改--}}
+                                <div class="user-edit-item">
+                                    <div class="item-title" style="line-height: 37px;">个人简介</div>
+                                    <div class="item-entry">
+                                        <input type="text"
+                                               class="form-control l-input {{$errors->has('introduction') ? 'is-invalid' : ''}}"
+                                               placeholder="请用一句话介绍你自己.."
+                                               name="introduction" value="{{$user->introduction}}">
+                                        @if($errors->has('introduction'))
+                                            <div class="invalid-feedback">
+                                                {{$errors->first('introduction')}}
+                                            </div>
+                                        @endif
+                                    </div>
                                 </div>
-                            </div>
-                            {{--提交--}}
-                            <div class="user-edit-item">
-                                <button type="button" class="btn" style="background-color: #0984e3;color: #fff;">保存修改
-                                </button>
-                            </div>
+                                {{--提交--}}
+                                <div class="user-edit-item">
+                                    <button type="submit" class="btn" style="background-color: #0984e3;color: #fff;">
+                                        保存修改
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -20,11 +20,11 @@
             <div class="container">
                 @yield('content')
             </div>
-
             @include('layouts._footer')
         </div>
         @yield('external_js')
         <script src="{{asset('js/app.js')}}"></script>
+        @include('layouts._message')
     </body>
 
 </html>

@@ -20,18 +20,17 @@
                         </div>
                         <div class="user-details-body">
                             <div class="user-details-item">
-                                <p>相识是偶然 无奈爱心顷刻变
-                                    你在我 又或是我在你 内心曾许下诺言
-                                    谁说有不散筵席 谁说生死不变
-                                    此刻共对亦无言 流露我心中凄怨
-                                    此刻共对亦无言 流露我心中凄怨
-                                    看着你 我愁怀满脸 泪水有如洒在面前
-                                    我的心怎忍说离别 凝望你轻忽走远
-                                    已别去 是已别去 让时光洗去悲怨</p>
+                                <p>{{$user->introduction}}</p>
 
                             </div>
                             <div class="user-details-item">
-                                注册于：3年前
+                                注册于：{{$user->created_at->diffForHumans()}}
+                            </div>
+                        </div>
+                        <div class="user-details-footer">
+                            <div class="toUserEdit">
+                                <a class="btn btn-outline-primary" href="{{route('users.edit', Auth::id())}}"
+                                   role="button">编辑个人资料</a>
                             </div>
                         </div>
                     </div>
