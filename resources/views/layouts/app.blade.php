@@ -22,8 +22,8 @@
             </div>
             @include('layouts._footer')
         </div>
-        @yield('external_js')
         <script src="{{asset('js/app.js')}}"></script>
+        @yield('external_js')
         @include('layouts._message')
     </body>
 

@@ -12,7 +12,7 @@
                 <div class="card-body user-body">
                     <div class="user-avatar">
                         <img class="user-avatar-img"
-                             src="https://ws2.sinaimg.cn/large/006tNbRwgy1fuh23auerrj309x09eq2x.jpg" alt="">
+                             src="{{$user->avatar}}" alt="">
                     </div>
                     <div class="user-details">
                         <div class="user-details-header">

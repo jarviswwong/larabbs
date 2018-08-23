@@ -36,7 +36,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDetailsDropdownMenu" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-                            <img src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60"
+                            <img src="{{Auth::user()->avatar}}"
                                  class="avatar-thumbnail" width="30px" height="30px">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDetailsDropdownMenu">
