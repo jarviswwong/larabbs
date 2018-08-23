@@ -9,6 +9,11 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("auth", ["except" => ['show']]);
+    }
+
     public function show(User $user)
     {
         return view("users.show", compact('user'));
@@ -16,19 +21,20 @@ class UsersController extends Controller
 
     public function edit(User $user)
     {
+        $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
     public function update(UserRequest $request, User $user)
     {
+        $this->authorize('update', $user);
         $user->update($request->all());
         return redirect()->route('users.show', $user->id)->with('success', '个人信息更新成功！');
     }
 
     public function avatar_edit(Request $request, ImageUploadHandler $imageUploadHandler, User $user)
     {
-
-//        dd($request->all());
+        $this->authorize('update', $user);
         $data = $request->all();
         if ($request->has('avatar')) {
             $result = $imageUploadHandler->storeImage($request->avatar, 'avatars', $user->id, $request->extension, 362);
