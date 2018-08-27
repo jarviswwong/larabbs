@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="user-header">
                     <img class="card-img-top user-header-img"
-                         src="{{url('https://ws2.sinaimg.cn/large/006tNbRwgy1fuh20ej1j7j30sg0sgmyl.jpg')}}"
+                         src="{{$user->header_img}}"
                          alt="user-header-img">
                 </div>
                 <div class="card-body user-body">
