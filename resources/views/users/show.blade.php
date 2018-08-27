@@ -29,7 +29,7 @@
                         </div>
                         <div class="user-details-footer">
                             <div class="toUserEdit">
-                                <a class="btn btn-outline-primary" href="{{route('users.edit', Auth::id())}}"
+                                <a class="btn btn-outline-primary" href="{{route('users.edit', $user->id)}}"
                                    role="button">编辑个人资料</a>
                             </div>
                         </div>
