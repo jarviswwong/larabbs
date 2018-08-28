@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@root')->name('root');
+//Root Page
+Route::get('/', 'TopicsController@index')->name('root');
 
 //Auth::routes();
 // Authentication Routes...
@@ -36,4 +37,7 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 Route::post('users/{user}/avatar/edit', 'UsersController@avatar_edit')->name('users.avatar.edit');
 
 //Topics edit
-Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('topics', 'TopicsController', ['only' => ['show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+//Category edit
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);

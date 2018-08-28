@@ -10731,6 +10731,14 @@ a:active {
   text-decoration: none;
 }
 
+.a_no_def_style {
+  color: #000;
+}
+
+.a_no_def_style:hover {
+  color: #000;
+}
+
 .card {
   background: #fff;
   border: 1px solid #ebebeb;
@@ -10758,6 +10766,16 @@ a:active {
 
 .Button:active {
   outline: 0;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 /* header */
@@ -10983,38 +11001,46 @@ body {
   margin-right: 2rem;
 }
 
+.root-page,
+.topics-index-page {
+  font-size: 15px;
+}
+
+.root-page .topic-container .topicHeader,
 .topics-index-page .topic-container .topicHeader {
   display: block;
 }
 
+.root-page .topic-container .topicHeader .topicHeaderItem,
 .topics-index-page .topic-container .topicHeader .topicHeaderItem {
   color: #000;
   display: inline-block;
   margin-left: 30px;
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 60px;
 }
 
+.root-page .topic-container .topicHeader .topicHeaderItem:link,
 .topics-index-page .topic-container .topicHeader .topicHeaderItem:link {
   color: #000;
 }
 
+.root-page .topic-container .topicHeader .topicHeaderItem:hover,
 .topics-index-page .topic-container .topicHeader .topicHeaderItem:hover {
   color: #2c3e50;
 }
 
+.root-page .topic-container .topicList .topic-card .card-wrapper,
 .topics-index-page .topic-container .topicList .topic-card .card-wrapper {
   padding: 15px;
 }
 
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header {
-  font-size: 15px;
-}
-
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-category,
 .topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-category {
   color: #95a5a6;
 }
 
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author,
 .topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11022,6 +11048,7 @@ body {
   margin: 8px 0;
 }
 
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userAvatar,
 .topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userAvatar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11030,12 +11057,14 @@ body {
   height: 24px;
 }
 
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userAvatar img,
 .topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userAvatar img {
   width: 100%;
   height: 100%;
   border-radius: 2px;
 }
 
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userName,
 .topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userName {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11044,7 +11073,221 @@ body {
   font-weight: 600;
 }
 
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userIntroduction,
 .topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-author .userIntroduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  color: #7f8c8d;
+  font-size: 14px !important;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title {
+  font-size: 20px !important;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title a,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title a {
+  color: #000;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title a:hover,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title a:hover {
+  color: #2c3e50;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail {
+  float: left;
+  width: 190px;
+  height: 105px;
+  margin-right: 10px;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail img,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-summary,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-summary {
+  font-size: 15px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0 0;
+  font-size: 14px;
+  clear: both;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions i,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions i {
+  margin-right: -2px;
+}
+
+.root-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions .topic-actions-item,
+.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions .topic-actions-item {
+  margin-right: 20px;
+  letter-spacing: 1px;
+  color: #95a5a6;
+}
+
+/* Categroy index page */
+
+.categories-show-page {
+  font-size: 15px;
+}
+
+.categories-show-page .category-container .categoryHeader .c_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.categories-show-page .category-container .categoryHeader .c_main .c_thumbnail {
+  width: 100px;
+  height: 100px;
+}
+
+.categories-show-page .category-container .categoryHeader .c_main .c_thumbnail img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.categories-show-page .category-container .categoryHeader .c_main .c_details_wrapper {
+  margin-left: 15px;
+}
+
+.categories-show-page .category-container .categoryHeader .c_main .c_details_wrapper .c_title {
+  font-size: 20px !important;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.categories-show-page .category-container .categoryHeader .c_main .c_details_wrapper .c_desc {
+  color: #7f8c8d;
+}
+
+.categories-show-page .category-container .categoryHeader .c_actions {
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+}
+
+.categories-show-page .category-container .c_topicList .c_topicListHeader {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.categories-show-page .category-container .c_topicList .c_topicListHeader .c_headerActions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.categories-show-page .category-container .c_topicList .c_topicListHeader .c_headerActions li {
+  position: relative;
+  font-size: 16px !important;
+  line-height: 50px;
+  padding: 0 20px;
+}
+
+.categories-show-page .category-container .c_topicList .c_topicListHeader .c_headerActions li a {
+  padding: 17px 0;
+}
+
+.categories-show-page .category-container .c_topicList .c_topicListHeader .c_headerActions .active::after {
+  position: absolute;
+  content: '';
+  left: 15px;
+  bottom: 0px;
+  width: 42px;
+  height: 0;
+  border-bottom: 2px solid #007bff;
+}
+
+.categories-show-page .category-container .c_topicList .c_topicListHeader ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper {
+  padding: 15px;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header {
+  font-size: 15px;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-title {
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-title a {
+  color: #000;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-title a:hover {
+  color: #2c3e50;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 0 12px;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-author .userAvatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-author .userAvatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-author .userName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-header .topic-author .userIntroduction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11059,55 +11302,70 @@ body {
   text-overflow: ellipsis;
 }
 
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title a {
-  color: #000;
-}
-
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-header .topic-title a:hover {
-  color: #2c3e50;
-}
-
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail {
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail {
   float: left;
   width: 190px;
   height: 105px;
   margin-right: 10px;
 }
 
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail img {
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-body .titleMapThumbnail img {
   width: 100%;
   height: 100%;
   border-radius: 4px;
 }
 
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-summary {
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-body .topic-summary {
   font-size: 15px;
   overflow-x: hidden;
   overflow-y: hidden;
   text-overflow: ellipsis;
 }
 
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions {
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-body .topic-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 15px 0 0;
+  font-size: 14px;
   clear: both;
 }
 
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions i {
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-body .topic-actions i {
   margin-right: -2px;
 }
 
-.topics-index-page .topic-container .topicList .topic-card .card-wrapper .topic-card-body .topic-actions .topic-actions-item {
+.categories-show-page .category-container .c_topicList .topic-card .card-wrapper .topic-card-body .topic-actions .topic-actions-item {
   margin-right: 20px;
   letter-spacing: 1px;
   color: #95a5a6;
+}
+
+.categories-show-page .sidebar .c_statistics .c_statistics_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0px;
+}
+
+.categories-show-page .sidebar .c_statistics .c_statistics_wrapper .l_item {
+  border-right: 1px solid #ebebeb;
+}
+
+.categories-show-page .sidebar .c_statistics .c_statistics_wrapper .l_item,
+.categories-show-page .sidebar .c_statistics .c_statistics_wrapper .r_item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 16px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.categories-show-page .sidebar .c_statistics .c_statistics_wrapper .l_item .datas,
+.categories-show-page .sidebar .c_statistics .c_statistics_wrapper .r_item .datas {
+  color: #000 !important;
+  font-size: 17px;
+  font-weight: 600;
 }
 

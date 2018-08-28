@@ -40,6 +40,14 @@ a {
   }
 }
 
+//重写一个a标签的样式
+.a_no_def_style {
+  color: #000;
+  &:hover {
+    color: #000;
+  }
+}
+
 //所有card添加阴影
 .card {
   background: #fff;
@@ -59,13 +67,24 @@ a {
   background: transparent;
   border: 0;
   padding: 0;
-  outline:none;
+  outline: none;
   cursor: pointer;
   &:focus {
     outline: 0;
   }
   &:active {
     outline: 0;
+  }
+}
+
+//修改bootstrap button默认样式
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+
+  &:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
   }
 }
 
@@ -301,7 +320,8 @@ body {
 }
 
 //topic-show-page styles
-.topics-index-page {
+.root-page, .topics-index-page {
+  font-size: 15px;
   .topic-container {
     //topic界面Header
     .topicHeader {
@@ -316,7 +336,7 @@ body {
         }
         display: inline-block;
         margin-left: 30px;
-        font-size: 16px;
+        font-size: 16px !important;
         line-height: 60px;
       }
     }
@@ -327,7 +347,6 @@ body {
         .card-wrapper {
           padding: 15px;
           .topic-card-header {
-            font-size: 15px;
             .topic-category {
               color: #95a5a6;
             }
@@ -355,7 +374,7 @@ body {
                 display: flex;
                 margin-left: 10px;
                 color: #7f8c8d;
-                font-size: 14px;
+                font-size: 14px !important;
                 align-items: flex-end;
                 overflow-x: hidden;
                 white-space: nowrap;
@@ -363,7 +382,7 @@ body {
               }
             }
             .topic-title {
-              font-size: 20px;
+              font-size: 20px !important;
               font-weight: 600;
               margin-bottom: 8px;
               a {
@@ -398,6 +417,7 @@ body {
             .topic-actions {
               display: flex;
               padding: 15px 0 0;
+              font-size: 14px;
               clear: both;
               i {
                 margin-right: -2px;
@@ -413,6 +433,207 @@ body {
             }
           }
 
+        }
+      }
+    }
+  }
+}
+
+/* Categroy index page */
+.categories-show-page {
+  font-size: 15px;
+  .category-container {
+    //header
+    .categoryHeader {
+      .c_main {
+        display: flex;
+        padding: 15px;
+        .c_thumbnail {
+          width: 100px;
+          height: 100px;
+          img {
+            width: 100%;
+            height: 100%;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+          }
+        }
+        .c_details_wrapper {
+          margin-left: 15px;
+          .c_title {
+            font-size: 20px !important;
+            font-weight: 600;
+            margin-bottom: 15px;
+          }
+
+          .c_desc {
+            color: #7f8c8d;
+
+          }
+        }
+      }
+
+      .c_actions {
+        border-top: 1px solid #ebebeb;
+        padding: 15px;
+
+        button.btn_focus {
+
+        }
+      }
+    }
+
+    //Category - topicList样式
+    .c_topicList {
+      //Header style
+      .c_topicListHeader {
+        border-bottom: 1px solid #ebebeb;
+        .c_headerActions {
+          display: flex;
+          li {
+            position: relative;
+            font-size: 16px !important;
+            line-height: 50px;
+            padding: 0 20px;
+            a {
+              padding: 17px 0;
+            }
+          }
+          .active {
+            &::after {
+              position: absolute;
+              content: '';
+              left: 15px;
+              bottom: 0px;
+              width: 42px;
+              height: 0;
+              border-bottom: 2px solid #007bff;
+            }
+          }
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .topic-card {
+        border-bottom: 1px solid #ebebeb;
+        .card-wrapper {
+          padding: 15px;
+          .topic-card-header {
+            font-size: 15px;
+            .topic-title {
+              font-size: 20px;
+              line-height: 21px;
+              font-weight: 600;
+              margin-bottom: 8px;
+              a {
+                color: #000;
+                &:hover {
+                  color: #2c3e50;
+                }
+              }
+            }
+            .topic-author {
+              display: flex;
+              margin: 8px 0 12px;
+              .userAvatar {
+                display: flex;
+                width: 24px;
+                height: 24px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  -webkit-border-radius: 2px;
+                  -moz-border-radius: 2px;
+                  border-radius: 2px;
+                }
+              }
+              .userName {
+                display: flex;
+                margin-left: 10px;
+                font-weight: 600;
+              }
+              .userIntroduction {
+                display: flex;
+                margin-left: 10px;
+                color: #7f8c8d;
+                font-size: 14px;
+                align-items: flex-end;
+                overflow-x: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
+          }
+
+          .topic-card-body {
+            .titleMapThumbnail {
+              float: left;
+              width: 190px;
+              height: 105px;
+              margin-right: 10px;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+              }
+            }
+
+            .topic-summary {
+              font-size: 15px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-overflow: ellipsis;
+            }
+
+            .topic-actions {
+              display: flex;
+              padding: 15px 0 0;
+              font-size: 14px;
+              clear: both;
+              i {
+                margin-right: -2px;
+              }
+              .topic-actions-item {
+                margin-right: 20px;
+                letter-spacing: 1px;
+                color: #95a5a6;
+              }
+              .Comments {
+
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    .c_statistics {
+      .c_statistics_wrapper {
+        display: flex;
+        padding: 15px 0px;
+        .l_item {
+          border-right: 1px solid #ebebeb;
+        }
+
+        .l_item, .r_item {
+          flex: 1;
+          font-size: 16px;
+          color: #7f8c8d;
+          text-align: center;
+
+          .datas {
+            color: #000 !important;
+            font-size: 17px;
+            font-weight: 600;
+          }
         }
       }
     }

@@ -4,7 +4,7 @@
             <div class="card-wrapper">
                 <div class="topic-card-header">
                     <div class="topic-category">
-                        来自：{{$topic->category->name}}
+                        来自：<a href="{{route('categories.show', $topic->category_id)}}">{{$topic->category->name}}</a>
                     </div>
                     <div class="topic-author">
                         <div class="userAvatar">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="topic-card-body">
                     <div class="titleMapThumbnail">
-                        <img src="{{url('https://ws3.sinaimg.cn/large/0069RVTdgy1fuo9zd9zlij31kw11xh5f.jpg')}}" alt="">
+                        <img src="{{$topic->title_map}}" alt="">
                     </div>
                     <div class="topic-summary">
                         {{$topic->body}}
